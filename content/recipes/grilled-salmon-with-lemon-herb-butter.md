@@ -1,5 +1,5 @@
 ---
-id: "2"
+id: "grilled-salmon-with-lemon-herb-butter"
 title: "Grilled Salmon with Lemon Herb Butter"
 description: "Tender, flaky salmon grilled to perfection with a zesty lemon herb butter sauce. Healthy and delicious!"
 image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop"

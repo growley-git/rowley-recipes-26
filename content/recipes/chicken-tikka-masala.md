@@ -1,5 +1,5 @@
 ---
-id: "7"
+id: "chicken-tikka-masala"
 title: "Chicken Tikka Masala"
 description: "Tender chicken in a rich, creamy tomato-based curry sauce. A popular Indian dish that's full of flavor."
 image: "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=800&h=600&fit=crop"

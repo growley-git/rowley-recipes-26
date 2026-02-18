@@ -1,5 +1,5 @@
 ---
-id: "4"
+id: "fresh-garden-salad-with-balsamic-vinaigrette"
 title: "Fresh Garden Salad with Balsamic Vinaigrette"
 description: "A crisp, refreshing salad loaded with fresh vegetables and a tangy balsamic vinaigrette dressing."
 image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop"

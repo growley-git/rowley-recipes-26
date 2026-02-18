@@ -54,9 +54,13 @@ function loadRecipesFromFilesystem(): Recipe[] {
       // Parse instructions from markdown body
       const instructions = parseInstructions(content)
       
+      // Use filename (without .md extension) as ID if not specified in frontmatter
+      const filenameSlug = file.replace(/\.md$/, '')
+      const recipeId = data.id || filenameSlug
+      
       // Build recipe object from frontmatter and parsed instructions
       const recipe: Recipe = {
-        id: data.id || '',
+        id: recipeId,
         title: data.title || '',
         description: data.description || '',
         image: data.image || '',
@@ -74,8 +78,8 @@ function loadRecipesFromFilesystem(): Recipe[] {
       return recipe
     })
     
-    // Sort by ID to maintain consistent order
-    recipes.sort((a, b) => parseInt(a.id) - parseInt(b.id))
+    // Sort by title to maintain consistent order
+    recipes.sort((a, b) => a.title.localeCompare(b.title))
     
     return recipes
   } catch (error) {

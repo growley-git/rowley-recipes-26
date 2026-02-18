@@ -1,5 +1,5 @@
 ---
-id: "1"
+id: "classic-chocolate-chip-cookies-crisp"
 title: "Classic Chocolate Chip Cookies Crisp"
 description: "Soft and chewy chocolate chip cookies that are perfect for any occasion. A timeless favorite that never disappoints."
 image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&h=600&fit=crop"

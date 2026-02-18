@@ -1,5 +1,5 @@
 ---
-id: "6"
+id: "banana-bread"
 title: "Banana Bread"
 description: "Moist and flavorful banana bread that's perfect for breakfast or as a snack. Uses overripe bananas for the best flavor."
 image: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=800&h=600&fit=crop"

@@ -1,5 +1,5 @@
 ---
-id: "3"
+id: "creamy-mushroom-risotto"
 title: "Creamy Mushroom Risotto"
 description: "Rich and creamy Italian risotto with sautéed mushrooms. A comforting dish that's perfect for a cozy dinner."
 image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&h=600&fit=crop"

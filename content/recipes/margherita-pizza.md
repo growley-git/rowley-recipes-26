@@ -1,5 +1,5 @@
 ---
-id: "8"
+id: "margherita-pizza"
 title: "Margherita Pizza"
 description: "Classic Italian pizza with fresh mozzarella, tomato sauce, and basil. Simple ingredients, incredible flavor."
 image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&h=600&fit=crop"

@@ -1,5 +1,5 @@
 ---
-id: "5"
+id: "beef-stroganoff"
 title: "Beef Stroganoff"
 description: "Tender strips of beef in a rich, creamy mushroom sauce served over egg noodles. A classic comfort food."
 image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&h=600&fit=crop"
