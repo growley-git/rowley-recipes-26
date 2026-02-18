@@ -32,6 +32,7 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:color';
 @use '../assets/scss/_variables.scss' as *;
 @use '../assets/scss/_mixins.scss' as *;
 
@@ -69,7 +70,7 @@ useHead({
       transition: background-color 0.2s ease, transform 0.2s ease;
 
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: color.adjust($primary-color, $lightness: -10%);
         transform: translateY(-2px);
       }
 
