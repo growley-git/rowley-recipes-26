@@ -50,13 +50,12 @@ const totalTime = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/scss/_variables.scss' as *;
 @use '../assets/scss/_mixins.scss' as *;
 
 .recipe-card {
   display: block;
-  background-color: $background;
-  border: 1px solid $border-color;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -73,7 +72,7 @@ const totalTime = computed(() => {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background-color: $background-alt;
+    background-color: var(--color-background-alt);
 
     img {
       width: 100%;
@@ -88,22 +87,22 @@ const totalTime = computed(() => {
   }
 
   .recipe-content {
-    padding: $spacing-lg;
+    padding: var(--spacing-lg);
   }
 
   .recipe-title {
-    font-size: $font-size-h4;
-    color: $secondary-color;
-    margin: 0 0 $spacing-sm 0;
-    font-weight: $font-weight-bold;
+    font-size: var(--font-size-h4);
+    color: var(--color-secondary);
+    margin: 0 0 var(--spacing-sm) 0;
+    font-weight: var(--font-weight-bold);
     line-height: 1.3;
   }
 
   .recipe-description {
-    color: $text-light;
-    font-size: $font-size-small;
-    line-height: $line-height-base;
-    margin: 0 0 $spacing-md 0;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-base);
+    margin: 0 0 var(--spacing-md) 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -113,18 +112,18 @@ const totalTime = computed(() => {
   .recipe-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: $spacing-md;
-    margin-top: $spacing-md;
-    padding-top: $spacing-md;
-    border-top: 1px solid $border-color;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
   }
 
   .meta-item {
     display: flex;
     align-items: center;
-    gap: $spacing-xs;
-    font-size: $font-size-small;
-    color: $text-light;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
 
     svg {
       flex-shrink: 0;

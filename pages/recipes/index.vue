@@ -61,30 +61,28 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-@use 'sass:color';
-@use '../../assets/scss/_variables.scss' as *;
 @use '../../assets/scss/_mixins.scss' as *;
 
 .recipes-page {
   .page-header {
     text-align: center;
-    margin-bottom: $spacing-xxl;
+    margin-bottom: var(--spacing-xxl);
 
     h1 {
-      color: $secondary-color;
-      margin-bottom: $spacing-sm;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-sm);
     }
 
     .page-subtitle {
-      color: $text-light;
-      font-size: $font-size-large;
+      color: var(--color-text-light);
+      font-size: var(--font-size-large);
     }
   }
 
   .recipes-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $spacing-lg;
+    gap: var(--spacing-lg);
 
     @include respond-to(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -97,42 +95,42 @@ useHead({
 
   .empty-state {
     text-align: center;
-    padding: $spacing-xxl 0;
-    color: $text-light;
+    padding: var(--spacing-xxl) 0;
+    color: var(--color-text-light);
 
     .empty-icon {
-      margin: 0 auto $spacing-lg;
-      color: $text-light;
+      margin: 0 auto var(--spacing-lg);
+      color: var(--color-text-light);
       opacity: 0.5;
     }
 
     h2 {
-      color: $text-color;
-      margin-bottom: $spacing-sm;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
     }
 
     p {
-      margin-bottom: $spacing-lg;
+      margin-bottom: var(--spacing-lg);
     }
 
     .clear-all-button {
-      padding: $spacing-sm $spacing-lg;
-      background-color: $primary-color;
-      color: $background;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      background-color: var(--color-primary);
+      color: var(--color-background);
       border: none;
       border-radius: 6px;
-      font-size: $font-size-base;
-      font-weight: $font-weight-medium;
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-medium);
       cursor: pointer;
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+        background-color: color-mix(in srgb, var(--color-primary) 90%, black);
       }
 
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.2);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
       }
     }
   }

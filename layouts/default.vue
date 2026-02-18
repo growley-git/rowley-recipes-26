@@ -27,7 +27,6 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/scss/_variables.scss' as *;
 @use '../assets/scss/_mixins.scss' as *;
 
 .layout {
@@ -37,9 +36,9 @@ const currentYear = new Date().getFullYear()
 }
 
 .header {
-  background-color: $secondary-color;
-  color: $background;
-  padding: $spacing-md 0;
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  padding: var(--spacing-md) 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   .container {
@@ -47,18 +46,18 @@ const currentYear = new Date().getFullYear()
   }
 
   .logo {
-    font-size: $font-size-h3;
+    font-size: var(--font-size-h3);
     margin: 0;
-    color: $background;
+    color: var(--color-background);
   }
 
   .nav {
     display: flex;
-    gap: $spacing-lg;
+    gap: var(--spacing-lg);
 
     .nav-link {
-      color: $background;
-      font-weight: $font-weight-medium;
+      color: var(--color-background);
+      font-weight: var(--font-weight-medium);
       transition: opacity 0.2s ease;
 
       &:hover {
@@ -70,19 +69,19 @@ const currentYear = new Date().getFullYear()
 
 .main {
   flex: 1;
-  padding: $spacing-xl 0;
+  padding: var(--spacing-xl) 0;
 }
 
 .footer {
-  background-color: $background-alt;
-  padding: $spacing-lg 0;
+  background-color: var(--color-background-alt);
+  padding: var(--spacing-lg) 0;
   margin-top: auto;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--color-border);
 
   p {
     text-align: center;
-    color: $text-light;
-    font-size: $font-size-small;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
     margin: 0;
   }
 }

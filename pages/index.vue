@@ -32,51 +32,49 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-@use 'sass:color';
-@use '../assets/scss/_variables.scss' as *;
 @use '../assets/scss/_mixins.scss' as *;
 
 .home {
   .hero {
     text-align: center;
-    padding: $spacing-xxl 0;
-    margin-bottom: $spacing-xxl;
+    padding: var(--spacing-xxl) 0;
+    margin-bottom: var(--spacing-xxl);
 
     .hero-title {
-      color: $primary-color;
-      margin-bottom: $spacing-md;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-md);
       
       @include respond-to(md) {
-        font-size: $font-size-h1;
+        font-size: var(--font-size-h1);
       }
     }
 
     .hero-subtitle {
-      font-size: $font-size-large;
-      color: $text-light;
+      font-size: var(--font-size-large);
+      color: var(--color-text-light);
       max-width: 600px;
-      margin: 0 auto $spacing-xl;
+      margin: 0 auto var(--spacing-xl);
     }
 
     .cta-button {
       display: inline-block;
-      padding: $spacing-md $spacing-xl;
-      background-color: $primary-color;
-      color: $background;
+      padding: var(--spacing-md) var(--spacing-xl);
+      background-color: var(--color-primary);
+      color: var(--color-background);
       text-decoration: none;
       border-radius: 8px;
-      font-weight: $font-weight-medium;
-      font-size: $font-size-base;
+      font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-base);
       transition: background-color 0.2s ease, transform 0.2s ease;
 
       &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+        background-color: color-mix(in srgb, var(--color-primary) 90%, black);
         transform: translateY(-2px);
       }
 
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.2);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
       }
     }
   }
@@ -84,8 +82,8 @@ useHead({
   .features {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $spacing-lg;
-    margin-top: $spacing-xl;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
 
     @include respond-to(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -96,10 +94,10 @@ useHead({
     }
 
     .feature-card {
-      background-color: $background-alt;
-      padding: $spacing-xl;
+      background-color: var(--color-background-alt);
+      padding: var(--spacing-xl);
       border-radius: 8px;
-      border: 1px solid $border-color;
+      border: 1px solid var(--color-border);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
 
       &:hover {
@@ -108,14 +106,14 @@ useHead({
       }
 
       h3 {
-        color: $secondary-color;
-        margin-bottom: $spacing-md;
-        font-size: $font-size-h4;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-md);
+        font-size: var(--font-size-h4);
       }
 
       p {
-        color: $text-light;
-        line-height: $line-height-base;
+        color: var(--color-text-light);
+        line-height: var(--line-height-base);
       }
     }
   }

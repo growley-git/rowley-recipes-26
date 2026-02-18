@@ -1,29 +1,29 @@
-@use './_variables.scss' as *;
-
 // Responsive Breakpoints
+// Note: Media queries require actual values, not CSS variables
+// These values match the CSS custom properties defined in themes
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
-    @media (min-width: $breakpoint-sm) {
+    @media (min-width: 640px) {
       @content;
     }
   }
   @if $breakpoint == md {
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: 768px) {
       @content;
     }
   }
   @if $breakpoint == lg {
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: 1024px) {
       @content;
     }
   }
   @if $breakpoint == xl {
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: 1280px) {
       @content;
     }
   }
   @if $breakpoint == 2xl {
-    @media (min-width: $breakpoint-2xl) {
+    @media (min-width: 1536px) {
       @content;
     }
   }
@@ -47,10 +47,9 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 var(--spacing-md);
   
   @include respond-to(lg) {
-    padding: 0 $spacing-lg;
+    padding: 0 var(--spacing-lg);
   }
 }
-

@@ -58,13 +58,12 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/scss/_variables.scss' as *;
 @use '../assets/scss/_mixins.scss' as *;
 
 .search-bar {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto $spacing-xl;
+  margin: 0 auto var(--spacing-xl);
 
   .search-input-wrapper {
     position: relative;
@@ -74,47 +73,47 @@ onUnmounted(() => {
 
   .search-icon {
     position: absolute;
-    left: $spacing-md;
-    color: $text-light;
+    left: var(--spacing-md);
+    color: var(--color-text-light);
     pointer-events: none;
   }
 
   .search-input {
     width: 100%;
-    padding: $spacing-md $spacing-xl $spacing-md 3rem;
-    font-size: $font-size-base;
-    border: 2px solid $border-color;
+    padding: var(--spacing-md) var(--spacing-xl) var(--spacing-md) 3rem;
+    font-size: var(--font-size-base);
+    border: 2px solid var(--color-border);
     border-radius: 8px;
-    background-color: $background;
-    color: $text-color;
+    background-color: var(--color-background);
+    color: var(--color-text);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
       outline: none;
-      border-color: $primary-color;
-      box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.1);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 10%, transparent);
     }
 
     &::placeholder {
-      color: $text-light;
+      color: var(--color-text-light);
     }
   }
 
   .clear-button {
     position: absolute;
-    right: $spacing-md;
+    right: var(--spacing-md);
     background: none;
     border: none;
     cursor: pointer;
-    color: $text-light;
-    padding: $spacing-xs;
+    color: var(--color-text-light);
+    padding: var(--spacing-xs);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: color 0.2s ease;
 
     &:hover {
-      color: $text-color;
+      color: var(--color-text);
     }
 
     &:focus {

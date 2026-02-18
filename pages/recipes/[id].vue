@@ -135,22 +135,21 @@ useHead(() => {
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/scss/_variables.scss' as *;
 @use '../../assets/scss/_mixins.scss' as *;
 
 .recipe-detail {
   .back-link {
     display: inline-flex;
     align-items: center;
-    gap: $spacing-sm;
-    color: $primary-color;
+    gap: var(--spacing-sm);
+    color: var(--color-primary);
     text-decoration: none;
-    font-weight: $font-weight-medium;
-    margin-bottom: $spacing-xl;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-xl);
     transition: color 0.2s ease;
 
     &:hover {
-      color: darken($primary-color, 10%);
+      color: color-mix(in srgb, var(--color-primary) 90%, black);
     }
 
     svg {
@@ -168,7 +167,7 @@ useHead(() => {
     height: 400px;
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: $spacing-xl;
+    margin-bottom: var(--spacing-xl);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     @include respond-to(md) {
@@ -183,26 +182,26 @@ useHead(() => {
   }
 
   .recipe-header {
-    margin-bottom: $spacing-xxl;
+    margin-bottom: var(--spacing-xxl);
 
     .recipe-title {
-      font-size: $font-size-h1;
-      color: $secondary-color;
-      margin-bottom: $spacing-md;
+      font-size: var(--font-size-h1);
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-md);
     }
 
     .recipe-description {
-      font-size: $font-size-large;
-      color: $text-light;
-      line-height: $line-height-base;
-      margin-bottom: $spacing-xl;
+      font-size: var(--font-size-large);
+      color: var(--color-text-light);
+      line-height: var(--line-height-base);
+      margin-bottom: var(--spacing-xl);
     }
   }
 
   .recipe-meta-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-md;
+    gap: var(--spacing-md);
 
     @include respond-to(md) {
       grid-template-columns: repeat(4, 1fr);
@@ -211,27 +210,27 @@ useHead(() => {
     .meta-card {
       display: flex;
       align-items: center;
-      gap: $spacing-md;
-      padding: $spacing-md;
-      background-color: $background-alt;
+      gap: var(--spacing-md);
+      padding: var(--spacing-md);
+      background-color: var(--color-background-alt);
       border-radius: 8px;
-      border: 1px solid $border-color;
+      border: 1px solid var(--color-border);
 
       svg {
         flex-shrink: 0;
-        color: $primary-color;
+        color: var(--color-primary);
       }
 
       .meta-label {
-        font-size: $font-size-small;
-        color: $text-light;
-        margin-bottom: $spacing-xs;
+        font-size: var(--font-size-small);
+        color: var(--color-text-light);
+        margin-bottom: var(--spacing-xs);
       }
 
       .meta-value {
-        font-size: $font-size-base;
-        font-weight: $font-weight-bold;
-        color: $text-color;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-text);
       }
     }
   }
@@ -239,8 +238,8 @@ useHead(() => {
   .recipe-content-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $spacing-xxl;
-    margin-bottom: $spacing-xxl;
+    gap: var(--spacing-xxl);
+    margin-bottom: var(--spacing-xxl);
 
     @include respond-to(lg) {
       grid-template-columns: 1fr 2fr;
@@ -250,9 +249,9 @@ useHead(() => {
   .ingredients-section,
   .instructions-section {
     h2 {
-      color: $secondary-color;
-      margin-bottom: $spacing-lg;
-      font-size: $font-size-h2;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-lg);
+      font-size: var(--font-size-h2);
     }
   }
 
@@ -262,22 +261,22 @@ useHead(() => {
     margin: 0;
 
     li {
-      padding: $spacing-sm 0 $spacing-sm $spacing-xl;
+      padding: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-xl);
       position: relative;
-      line-height: $line-height-base;
-      color: $text-color;
+      line-height: var(--line-height-base);
+      color: var(--color-text);
 
       &::before {
         content: '•';
         position: absolute;
         left: 0;
-        color: $primary-color;
-        font-weight: $font-weight-bold;
+        color: var(--color-primary);
+        font-weight: var(--font-weight-bold);
         font-size: 1.2em;
       }
 
       &:not(:last-child) {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid var(--color-border);
       }
     }
   }
@@ -290,61 +289,61 @@ useHead(() => {
 
     li {
       counter-increment: step-counter;
-      padding: $spacing-md 0 $spacing-md $spacing-xxl;
+      padding: var(--spacing-md) 0 var(--spacing-md) var(--spacing-xxl);
       position: relative;
-      line-height: $line-height-base;
-      color: $text-color;
-      margin-bottom: $spacing-md;
+      line-height: var(--line-height-base);
+      color: var(--color-text);
+      margin-bottom: var(--spacing-md);
 
       &::before {
         content: counter(step-counter);
         position: absolute;
         left: 0;
-        top: $spacing-md;
+        top: var(--spacing-md);
         width: 2rem;
         height: 2rem;
-        background-color: $primary-color;
-        color: $background;
+        background-color: var(--color-primary);
+        color: var(--color-background);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: $font-weight-bold;
-        font-size: $font-size-small;
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-small);
       }
     }
   }
 
   .recipe-tags {
-    padding-top: $spacing-xl;
-    border-top: 2px solid $border-color;
+    padding-top: var(--spacing-xl);
+    border-top: 2px solid var(--color-border);
 
     h3 {
-      color: $secondary-color;
-      margin-bottom: $spacing-md;
-      font-size: $font-size-h4;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-md);
+      font-size: var(--font-size-h4);
     }
 
     .tags-list {
       display: flex;
       flex-wrap: wrap;
-      gap: $spacing-sm;
+      gap: var(--spacing-sm);
     }
 
     .tag {
       display: inline-block;
-      padding: $spacing-xs $spacing-md;
-      background-color: $background-alt;
-      color: $text-color;
+      padding: var(--spacing-xs) var(--spacing-md);
+      background-color: var(--color-background-alt);
+      color: var(--color-text);
       border-radius: 20px;
-      font-size: $font-size-small;
-      border: 1px solid $border-color;
+      font-size: var(--font-size-small);
+      border: 1px solid var(--color-border);
     }
   }
 }
 
 .not-found {
-  padding: $spacing-xxl 0;
+  padding: var(--spacing-xxl) 0;
 
   .not-found-content {
     text-align: center;
@@ -352,28 +351,28 @@ useHead(() => {
     margin: 0 auto;
 
     h1 {
-      color: $secondary-color;
-      margin-bottom: $spacing-md;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-md);
     }
 
     p {
-      color: $text-light;
-      margin-bottom: $spacing-xl;
-      font-size: $font-size-large;
+      color: var(--color-text-light);
+      margin-bottom: var(--spacing-xl);
+      font-size: var(--font-size-large);
     }
 
     .back-button {
       display: inline-block;
-      padding: $spacing-md $spacing-xl;
-      background-color: $primary-color;
-      color: $background;
+      padding: var(--spacing-md) var(--spacing-xl);
+      background-color: var(--color-primary);
+      color: var(--color-background);
       text-decoration: none;
       border-radius: 8px;
-      font-weight: $font-weight-medium;
+      font-weight: var(--font-weight-medium);
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: color-mix(in srgb, var(--color-primary) 90%, black);
       }
     }
   }
